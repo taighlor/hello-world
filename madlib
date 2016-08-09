@@ -1,0 +1,32 @@
+import java.util.Scanner;
+import java.io.File;
+
+public class MadLibs {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner userScanner = new Scanner(System.in);
+		
+		String noun;
+		String verb;
+		String adjective;
+		String adverb;
+		
+		System.out.println("Please enter a noun:");
+		noun = userScanner.next();
+		
+		System.out.println("Please enter a verb:");
+		verb = userScanner.next();
+		
+		System.out.println("Please enter an adjective");
+		adjective = userScanner.next();
+		
+		System.out.println("Please enter an adverb");
+		adverb = userScanner.next();
+		
+		System.out.println("My " + noun + " is always " + adjective + " One time we had to " + verb + " " + adverb);
+		
+		userScanner.close();
+	}
+
+}
