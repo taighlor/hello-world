@@ -11,6 +11,7 @@ public class MadLibs {
 		String verb;
 		String adjective;
 		String adverb;
+		String name;
 		
 		System.out.println("Please enter a noun:");
 		noun = userScanner.next();
@@ -24,7 +25,10 @@ public class MadLibs {
 		System.out.println("Please enter an adverb");
 		adverb = userScanner.next();
 		
-		System.out.println("My " + noun + " is always " + adjective + " One time we had to " + verb + " " + adverb);
+		System.out.println("Please enter a name");
+		name = userScanner.next();
+		
+		System.out.println("My " + noun + " " + name + " is always " + adjective + ". One time we had to " + verb + " " + adverb);
 		
 		userScanner.close();
 	}
