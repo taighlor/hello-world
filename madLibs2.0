@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class madLibs2 {
+
+	public static void main(String[] args) {
+
+		Scanner scanUserInput = new Scanner(System.in);
+		
+		String noun, verb, adjective, adverb, name;
+		int age;
+		
+			System.out.println("Welcome to Madlibs, please enter your name");
+			name = scanUserInput.next();
+		
+			System.out.println("Hi " + name + " How old are you?:");
+			age = scanUserInput.nextInt();
+				if (age < 12){
+					System.out.println("sorry you're too young to play");	
+				}
+				if (age >= 13){
+					System.out.println("Cool let's play! Please enter a noun:");
+					noun = scanUserInput.next();
+					
+					System.out.println("Please enter a verb:");
+					verb = scanUserInput.next();
+					
+					System.out.println("Please enter an adjective");
+					adjective = scanUserInput.next();
+					
+					System.out.println("Please enter an adverb");
+					adverb = scanUserInput.next();
+						
+					System.out.println("My " + noun + " is always " + adjective + ". One time we had to " + verb + " " + adverb);
+						}
+				
+		scanUserInput.close();
+	}
+
+}
