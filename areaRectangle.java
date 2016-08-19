@@ -2,7 +2,7 @@
 import java.util.Scanner;
 
 public class areaRectangle {
-	private static double length, width, areaFeet, areaMeters, roundOffMeters, roundOffFeet;
+	private static double length, width, areaFeet, areaMeters;
 	private static final double conversion = 0.09290304;
 	
 	public static void main(String[] args) {
@@ -14,10 +14,10 @@ public class areaRectangle {
    
 			areaFeet = length*width;
 			areaMeters = areaFeet*conversion;
-			roundOffMeters = Math.round(areaMeters*100.00)/100.00;
-			roundOffFeet = Math.round(areaFeet*100.00)/100.00;
-			System.out.println("The area of the room is " + roundOffFeet + " square feet");
-			System.out.println("The area of the room is " + roundOffMeters + " square meters");
+
+			System.out.println("The area of the room is " + areaFeet + " square feet");
+			System.out.println("The area of the room is " + areaMeters + " square meters");
 		scanUserInput.close();
 	}
 }
+
