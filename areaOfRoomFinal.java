@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class extendedRectnagles {
 	private static Scanner scanUserInput = new Scanner(System.in);
@@ -15,7 +16,7 @@ public class extendedRectnagles {
 			System.out.println("Please insert the rooms width: ");
 			width = scanUserInput.nextDouble();
 			return true;
-		} catch (Exception error) {
+		} catch (InputMismatchException error) {
 			System.out.println("*** ERROR: VALUE ENTERED NOT DOUBLE ***");
 			return false;
 		}
@@ -38,7 +39,11 @@ public class extendedRectnagles {
 	}
 	public static void main(String[] args) {
 		extendedRectnagles process = new extendedRectnagles();
-		process.feetOrMeters();
+		do {
+			process.feetOrMeters();
+		} while (!extendedRectnagles.measurementType.equals("feet")
+		&& !extendedRectnagles.measurementType.equals("meters"));
+		
 		if (extendedRectnagles.measurementType.equals("feet")){
 			if (process.askingUserMeasurement()){
 				process.calculatingAreaFeet();
@@ -49,11 +54,6 @@ public class extendedRectnagles {
 				process.calculatingAreaMeters();
 			}
 		} 
-		if (!extendedRectnagles.measurementType.equals("feet")
-		&& !extendedRectnagles.measurementType.equals("meters")){
-			System.out.println("Please enter either feet or meters only");
-			process.feetOrMeters();
-		}
 		scanUserInput.close();
 	}
 }
